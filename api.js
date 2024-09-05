@@ -7,6 +7,11 @@ const db = document.getElementById("db");
 const cb = document.getElementById("cb");
 const vis = document.getElementById("vis");
 
+body.style.setProperty("background-image", "url(bg.jfif)")
+body.style.setProperty("background-size", "cover")
+body.style.setProperty("background-position", "center")
+body.style.setProperty("background-repeat", "no-repeat")
+
 const dfighter = document.getElementById('dfighter');
 const cfighter = document.getElementById('cfighter');
 const vs = document.getElementById("vs")
