@@ -71,7 +71,8 @@ function gnc() {
     getNewCat();
 }
 
-document.getElementById("ws").addEventListener("click", winner);
+const sw = document.getElementById("ws")
+sw.addEventListener("click", winner);
 
 async function winner() {
     let inputVal = document.getElementById("w").value;
@@ -84,6 +85,9 @@ async function winner() {
             'Content-Type': 'application/json; charset=UTF-8',
         }
     });
+    request.onreadystatechange = alertResponse;
+    request.open("GET", "supp.html");
+    request.send();
 
     resolveMessage(response);
 }
@@ -96,3 +100,26 @@ async function resolveMessage(response) {
         console.log("The request returned a status other than 200 OK: " + response.status);
     }
 }
+
+
+function alertResponse() {
+    if (request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            alert(request.responseText);
+        } else {
+            alert("The request returned a status other than 200 OK: " + request.status);
+        }
+    }
+};
+
+const message = new Promise((resolve, reject) => {
+    request = new XMLHttpRequest();
+
+    if (!request) {
+        alert("Failed to create an XMLHttpRequest Object.");
+        return false;
+    }
+    
+
+});
+
