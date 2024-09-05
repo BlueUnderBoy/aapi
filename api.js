@@ -71,15 +71,13 @@ function gnc() {
     getNewCat();
 }
 
-document
-    .getElementById("myBtn")
-    .addEventListener("click", testRequest);
+document.getElementById("ws").addEventListener("click", winner);
 
-async function testRequest() {
-    let inputVal = document.getElementById("myInput").value;
+async function winner() {
+    let inputVal = document.getElementById("w").value;
     let requestBody = { data: inputVal };
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos', {
+    const response = await fetch('https://httpbin.org/post', {
         method: 'POST',
         body: JSON.stringify(requestBody),
         headers: {
@@ -87,10 +85,10 @@ async function testRequest() {
         }
     });
 
-    logResponse(response);
+    resolveMessage(response);
 }
 
-async function logResponse(response) {
+async function resolveMessage(response) {
     if (response.ok) {
         const jsonData = await response.json();
         console.log(jsonData);
