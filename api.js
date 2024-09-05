@@ -1,12 +1,26 @@
+const body = document.getElementById("cont");
+const dc = document.getElementById("d");
+const cc = document.getElementById("c");
+const dt = document.getElementById("dt");
+const ct = document.getElementById("ct");
+
 const dfighter = document.getElementById('dfighter');
 const cfighter = document.getElementById('cfighter');
+const vs = document.getElementById("vs")
 const dog = document.getElementById('dog');
 const cat = document.getElementById('cat');
 
+dt.style.setProperty("display", "flex")
+dt.style.setProperty("justify-content", "center")
+
+ct.style.setProperty("display", "flex")
+ct.style.setProperty("justify-content", "center")
+
+vs.style.setProperty("margin-left", "50px")
+vs.style.setProperty("margin-right", "100px")
 dog.addEventListener("click", gnd);
 cat.addEventListener("click", gnc);
 
-const body = document.getElementById("cont");
 
 body.style.setProperty("height", "1000px")
 body.style.setProperty("width", "fill")
