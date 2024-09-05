@@ -3,12 +3,25 @@ const dc = document.getElementById("d");
 const cc = document.getElementById("c");
 const dt = document.getElementById("dt");
 const ct = document.getElementById("ct");
+const db = document.getElementById("db");
+const cb = document.getElementById("cb");
+const vis = document.getElementById("vis");
 
 const dfighter = document.getElementById('dfighter');
 const cfighter = document.getElementById('cfighter');
 const vs = document.getElementById("vs")
 const dog = document.getElementById('dog');
 const cat = document.getElementById('cat');
+
+vis.style.setProperty("text-align", "center")
+vis.style.setProperty("margin-right", "40px")
+
+db.style.setProperty("display", "flex")
+db.style.setProperty("justify-content", "center")
+
+cb.style.setProperty("display", "flex")
+cb.style.setProperty("justify-content", "center")
+
 
 dt.style.setProperty("display", "flex")
 dt.style.setProperty("justify-content", "center")
