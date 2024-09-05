@@ -43,6 +43,3 @@ function gnd() {
 function gnc() {
     getNewCat();
 }
-
-getNewDog();
-getNewCat();
