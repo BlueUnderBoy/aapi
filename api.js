@@ -2,8 +2,13 @@ const dfighter = document.getElementById('dfighter');
 const cfighter = document.getElementById('cfighter');
 const dog = document.getElementById('dog');
 const cat = document.getElementById('cat');
+
 dfighter.addEventListener("click", getNewDog);
-cfighter.addEventListener("click", getNewCat)
+cfighter.addEventListener("click", getNewCat);
+
+const body = document.getElementById("cont");
+
+body.style.setProperty("display", "flex")
 
 async function getNewDog() {
     dog.style.cursor = 'wait';
@@ -24,3 +29,6 @@ async function getNewCat() {
     cfighter.src = url;
     cat.style.cursor = 'pointer';
 }
+
+getNewDog();
+getNewCat();
